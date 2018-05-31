@@ -1,5 +1,5 @@
 <?php
-    $path = "db.json";
+    $path = "data/db.json";
     if (!file_exists($path))
       exit('File not found');
     
@@ -70,9 +70,11 @@
    <div class="screenshots">
     <h2 id="link3" class="screenshots__title">Screenshots</h2>
     <div class="screenshots__container">
-      <div class="fas fa-angle-left fa-3x arrow"></div>
+      <div id="arrow_left" class="arrow">
+        <div class="fas fa-angle-left fa-3x"></div>
+      </div>
       <div class="slider">
-        <ul class="slider__container">
+        <ul id="slider" class="slider__container">
         <?php
           $i = 1;
           foreach ($slides as $slide) {
@@ -82,7 +84,9 @@
         ?>
         </ul>
       </div>
-      <div class="fas fa-angle-right fa-3x arrow"></div>
+      <div id="arrow_right" class="arrow">
+        <div class="fas fa-angle-right fa-3x"></div>
+      </div>
     </div>
    </div>
    <footer class="main-footer">
