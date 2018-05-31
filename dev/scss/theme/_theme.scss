@@ -1,0 +1,30 @@
+/* Text */
+p[class$="text"],
+h2[class$="title"],
+.moment__item {
+  color: colors(text);
+  font-size: .9em;
+}
+
+/* Titles */
+h2[class$="title"] {
+  font-size: 1.5em;
+  margin: $s auto;
+}
+
+/* Info */
+.slider, .info {
+  padding: 0 $s;
+}
+
+.info {
+  margin-top: $l;  
+}
+
+.moment__item {
+  margin-left: -20px;  // magic number: align bullet
+}
+
+
+
+

@@ -1,0 +1,31 @@
+.jumbotron {
+  background-color: colors(bg);
+  padding: $m;
+  position: relative;
+}
+
+.main-aside {
+  display: none;
+}
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__button {
+    text-transform: uppercase;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    bottom: 0;
+    left: 50%;
+    font-size: 1.5em;
+    padding: $s $m;
+  }
+
+  &__title {
+    padding-bottom: $s;
+    border-bottom: 1px solid colors(secundary);
+  }
+
+  &__text {margin: $s 0;}
+}

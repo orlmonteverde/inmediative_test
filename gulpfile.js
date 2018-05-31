@@ -6,15 +6,26 @@ const gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
-  autoprefixer = require('gulp-autoprefixer');
+  concat = require('gulp-concat'),
+  autoprefixer = require('gulp-autoprefixer')
 
 const sassOptions = {
   outputStyle: 'expanded'
-};
+}
 
 const prefixerOptions = {
   browsers: ['last 2 versions']
-};
+}
+
+const babelOptions = {
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ]
+}
 
 gulp.task('sass',()  =>{
   gulp.src('dev/scss/styles.scss')
@@ -28,31 +39,26 @@ gulp.task('sass',()  =>{
     .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task('scripts',()  =>{
-    gulp.src('dev/js/app.js')
-        .pipe(babel({
-          "presets": [
-            ["env", {
-              "targets": {
-                "browsers": ["last 2 versions", "safari >= 7"]
-              }
-            }]
-          ]
-        }))
-        .pipe(uglify())
-        .pipe(rename('app.js'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/js'))
-    });
+gulp.task('scripts',()  => {
+    gulp.src('dev/js/**/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(babel(babelOptions))
+      .pipe(concat('app.js'))
+      .pipe(uglify())
+      .pipe(rename('app.js'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('public/js'))
+    })
 
 gulp.task('build', ['sass', 'scripts']);
 
 gulp.task('watch', () => {
   gulp.watch('dev/scss/**/*.scss', ['sass']);
   gulp.watch('dev/js/**/*.js', ['scripts']);
-});
+})
 
 gulp.task('default', () => {
   gulp.watch('dev/scss/**/*.scss', ['sass']);
   gulp.watch('dev/js/**/*.js', ['scripts']);
-});
+})

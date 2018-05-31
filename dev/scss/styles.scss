@@ -1,15 +1,22 @@
 // CONFIG
 @import "config/functions";
 @import "config/variables";
-@import "config/mixins";
 
 // BASE
+@import "base/normalize";
 @import "base/base";
 
 // LAYOUT
 @import "layout/layout";
 
+// THEME
+@import "theme/theme";
+@import "theme/header";
+@import "theme/jumbotron";
+@import "theme/footer";
+
 // COMPONENTS
 @import "components/buttons";
 @import "components/menus";
+@import "components/slider";
 

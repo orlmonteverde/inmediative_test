@@ -1,6 +1,22 @@
 // Typography
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Open Sans', sans-serif;
 
 // Colors
+$colors: (
+	primary: #000000,
+	secundary: #666666,
+	dark: #7e235d,
+	light: #ffffff,
+	text: #171717,
+	bg: #CDCDCE,
+	cta: #2C5DFF,
+);
+
+// Gutters
+$m: 2rem;
+$s: $m / 2;
+$xs: $m / 4;
+$l: $m * 1.5;
+$xl: $m * 2;
 
 

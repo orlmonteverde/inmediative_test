@@ -1,0 +1,12 @@
+.nav-bar {
+  margin: 0;
+  
+  &__item {
+    list-style: none;
+    margin-right: $s;
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

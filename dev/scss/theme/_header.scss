@@ -1,0 +1,13 @@
+.main-header__title, .nav-bar {
+  padding: $s;
+}
+
+.main-header__title {
+  background-color: colors(primary);
+  color: colors(light);
+  margin: 0;
+}
+
+.nav-bar__item {
+  padding: $xs $s;
+}
