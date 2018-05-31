@@ -1,0 +1,18 @@
+.slider {
+  overflow: hidden;
+  height: $slider-size;
+  
+  &__container {
+    padding: 0;
+    display: flex;
+    width: $slider-size * 9;
+    justify-content: space-between;
+  }
+
+  &__item {
+    list-style: none;
+    height: 100%;
+    width: $slider-size;
+    margin: 0 $xs;
+  }
+}

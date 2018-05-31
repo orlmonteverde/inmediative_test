@@ -1,8 +1,9 @@
 .main-footer {
-  height: 50px;
   background-color: colors(secundary);
+  padding: $m;
 
-  &__mgs {
+  &__msg {
     text-align: center;
+    color: colors(light);
   }
 }

@@ -27,7 +27,7 @@ const babelOptions = {
   ]
 }
 
-gulp.task('sass',()  =>{
+gulp.task('sass',()  => {
   gulp.src('dev/scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))

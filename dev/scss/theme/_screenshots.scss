@@ -1,0 +1,17 @@
+.screenshots__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: $s;
+}
+
+.arrow {
+  color: colors(cta);
+  width: 15%;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.slider {
+  width: 70%;
+  flex-grow: 5;
+}

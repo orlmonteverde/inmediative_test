@@ -1,9 +1,9 @@
-# inmediative_test
-test to inmediative
+# Inmediative test
+Test to **Inmediative**
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -13,3 +13,11 @@ gulp
 # build for production with minification
 gulp build
 ```
+
+## Preview
+
+### Desktop
+![Desktop Preview](/doc/desktop.png)
+
+### Mobile
+![Desktop Preview](/doc/mobile.png)

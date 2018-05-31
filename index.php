@@ -65,26 +65,30 @@
     
     </div>
    </section>
-   <div class="slider">
-    <h2 id="link3" class="slider__title">Screenshots</h2>
-    <div class="slider__container">
+   <div class="screenshots">
+    <h2 id="link3" class="screenshots__title">Screenshots</h2>
+    <div class="screenshots__container">
       <div class="fas fa-angle-left fa-5x arrow"></div>
-      <ul class="slider__images">
-      <?php
-        $i = 1;
-        foreach ($slides as $slide) {
-          echo "<li class='slider__item'><img class='slider__img' src='{$slide}' alt='slider image 0{$i}'></li>" . PHP_EOL;
-          $i++;
-        }
-      ?>
-      </ul>
+      <div class="slider">
+        <ul class="slider__container">
+        <?php
+          $i = 1;
+          foreach ($slides as $slide) {
+            echo "<li class='slider__item'><img class='slider__img' src='{$slide}' alt='slider image 0{$i}'></li>" . PHP_EOL;
+            $i++;
+          }
+        ?>
+        </ul>
+      </div>
       <div class="fas fa-angle-right fa-5x arrow"></div>
     </div>
    </div>
    <footer class="main-footer">
     <p class="main-footer__msg">Gracias por tomarte este tiempo :)</p>
    </footer>
+    <!-- Font-Awesomen -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
     <script src="/public/js/app.min.js"></script>
   </body>
   </html>
