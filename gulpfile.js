@@ -1,21 +1,22 @@
 'use strict';
-var gulp = require('gulp'),
+const gulp = require('gulp'),
   sass = require('gulp-sass'),
   rename = require('gulp-rename'),
   cssmin = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
   babel = require('gulp-babel'),
+  uglify = require('gulp-uglify'),
   autoprefixer = require('gulp-autoprefixer');
 
-var sassOptions = {
+const sassOptions = {
   outputStyle: 'expanded'
 };
 
-var prefixerOptions = {
+const prefixerOptions = {
   browsers: ['last 2 versions']
 };
 
-gulp.task('sass', function() {
+gulp.task('sass',()  =>{
   gulp.src('dev/scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
@@ -27,8 +28,8 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task('scripts', function() {
-    gulp.src('dev/js/index.js')
+gulp.task('scripts',()  =>{
+    gulp.src('dev/js/app.js')
         .pipe(babel({
           "presets": [
             ["env", {
@@ -38,15 +39,20 @@ gulp.task('scripts', function() {
             }]
           ]
         }))
+        .pipe(uglify())
+        .pipe(rename('app.js'))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('public/js'))
     });
 
-gulp.task('watch', function () {
+gulp.task('build', ['sass', 'scripts']);
+
+gulp.task('watch', () => {
   gulp.watch('dev/scss/**/*.scss', ['sass']);
   gulp.watch('dev/js/**/*.js', ['scripts']);
 });
 
-gulp.task('default', function () {
+gulp.task('default', () => {
   gulp.watch('dev/scss/**/*.scss', ['sass']);
   gulp.watch('dev/js/**/*.js', ['scripts']);
 });

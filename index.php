@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="/public/css/main.min.css">
   <title>Inmediative test</title>
 
@@ -46,11 +47,11 @@
    </section>
    <section class="info">
     <div class="info-left">
-      <h2 class="info-left__title"><?php echo $box["title"] ?></h2>
+      <h2 id="link1" class="info-left__title"><?php echo $box["title"] ?></h2>
       <p class="info-left__text"><?php echo $box["text"] ?></p>
     </div>
     <div class="info-right">
-    <h2 class="info-right__title">Moment</h2>
+    <h2 id="link2" class="info-right__title">Moment</h2>
     <ul class="moment">
       <?php
         $i = 1;
@@ -64,7 +65,7 @@
     </div>
    </section>
    <div class="slider">
-    <h2 class="slider__title">Screenshots</h2>
+    <h2 id="link3" class="slider__title">Screenshots</h2>
     <ul class="slider__container">
     <?php
       $i = 1;
@@ -78,5 +79,6 @@
    <footer class="main-footer">
     <p class="main-footer__text">Gracias por tomarte este tiempo :)</p>
    </footer>
+    <script src="/public/js/app.min.js"></script>
   </body>
   </html>
