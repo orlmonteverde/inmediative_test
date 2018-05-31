@@ -2,10 +2,14 @@
   padding: $s;
 }
 
-.main-header__title {
+.main-header {
   background-color: colors(primary);
-  color: colors(light);
-  margin: 0;
+
+  &__title {
+    color: colors(light);
+    margin: 0;
+  }
+
 }
 
 .nav-bar__item {

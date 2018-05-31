@@ -1,5 +1,19 @@
 .nav-bar {
   margin: 0;
+  background-color: colors(light);
+  
+  @media screen and (min-width: 640px) {
+    background-color: colors(primary);
+    &__item {
+      background-color: colors(light);
+      color: colors(primary);
+
+      &:hover {
+        background-color: colors(secundary);
+        color: colors(light);
+      }
+    }
+  }
   
   &__item {
     list-style: none;

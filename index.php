@@ -27,16 +27,18 @@
 </head>
 <body>
    <header class="main-header">
-     <h1 class="main-header__title"><?php echo $json["title"]?></h1>
-     <nav class="main-nav">
-       <ul class="nav-bar">
-         <?php 
-          foreach ($menu as $li) {
-            echo "<li class='nav-bar__item btn'><a class='nav-bar__link' href='{$li['href']}'>{$li['title']}</a></li>" . PHP_EOL;
-         }
-         ?>
-       </ul>
-     </nav>
+     <div class="main-header__container">
+       <h1 class="main-header__title"><?php echo $json["title"]?></h1>
+       <nav class="main-nav">
+         <ul class="nav-bar">
+           <?php 
+            foreach ($menu as $li) {
+              echo "<li class='nav-bar__item btn'><a class='nav-bar__link' href='{$li['href']}'>{$li['title']}</a></li>" . PHP_EOL;
+           }
+           ?>
+         </ul>
+       </nav>
+     </div>
    </header>
    <section class="jumbotron">
      <div class="jumbotron__data">
@@ -47,6 +49,7 @@
      <button class="jumbotron__button btn">descargar</button>
    </section>
    <section class="info">
+
     <div class="info-left">
       <h2 id="link1" class="info-left__title"><?php echo $box["title"] ?></h2>
       <p class="info-left__text"><?php echo $box["text"] ?></p>
@@ -62,13 +65,12 @@
         }
       ?>
     </ul>
-    
     </div>
    </section>
    <div class="screenshots">
     <h2 id="link3" class="screenshots__title">Screenshots</h2>
     <div class="screenshots__container">
-      <div class="fas fa-angle-left fa-5x arrow"></div>
+      <div class="fas fa-angle-left fa-3x arrow"></div>
       <div class="slider">
         <ul class="slider__container">
         <?php
@@ -80,7 +82,7 @@
         ?>
         </ul>
       </div>
-      <div class="fas fa-angle-right fa-5x arrow"></div>
+      <div class="fas fa-angle-right fa-3x arrow"></div>
     </div>
    </div>
    <footer class="main-footer">
