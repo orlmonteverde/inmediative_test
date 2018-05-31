@@ -11,13 +11,16 @@
 .main-header__container {
   display: flex;
   flex-direction: column;
+
   @media screen and (min-width: 640px) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .nav-bar {
   display: flex;
+
 }
 
 .info {
@@ -30,7 +33,7 @@
     }
   }
   @media screen and (min-width: 1024px) {
-    justify-content:flex-start;
+    justify-content: flex-start;
 
     &-left, &-right {
       width: 40%;

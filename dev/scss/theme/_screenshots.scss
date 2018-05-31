@@ -11,6 +11,11 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  transition: all .5s;
+
+  &:hover {
+    animation: .7s gun 1;
+  }
 }
 
 .slider {

@@ -1,0 +1,16 @@
+/* Gun effect */
+
+@keyframes gun {
+	35% {
+		transform: scaleX(1.2)
+				   scaleY(0.8);
+	}
+	50% {
+		transform: scaleX(0.8)
+				   scaleY(1.2)
+	}
+	65% {
+		transform: scaleX(1.1)
+				   scaleY(0.9)
+	}
+}

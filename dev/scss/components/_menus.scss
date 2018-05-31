@@ -3,7 +3,8 @@
   background-color: colors(light);
   
   @media screen and (min-width: 640px) {
-    background-color: colors(primary);
+    background-color: inherit;
+    
     &__item {
       background-color: colors(light);
       color: colors(primary);
