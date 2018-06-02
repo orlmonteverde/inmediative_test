@@ -3,6 +3,15 @@
   width: 200px;
   height: 380px;
   background-color: colors(secundary);
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: $m;
+    right: $m;
+    z-index: 10;
+  }
 }
 
 .jumbotron {
@@ -13,26 +22,6 @@
   justify-content: center;
   align-items: center;
 
-    @media screen and (min-width: 1024px) {
-      justify-content: flex-start;
-      border-radius: 10px;
-      margin-top: $m;
-
-      .main-aside {
-        display: block;
-        position: absolute;
-        border-radius: 10px;
-        top: $m;
-        right: $m;
-        z-index: 10;
-      }
-
-      &__data {
-        width: 75%;
-      }
-    }
-
-
   &__button {
     text-transform: uppercase;
     position: absolute;
@@ -42,11 +31,21 @@
     font-size: 1.5em;
     padding: $s $m;
   }
-
+  
   &__title {
     padding-bottom: $s;
     border-bottom: 1px solid colors(secundary);
   }
-
+  
   &__text {margin: $s 0;}
+
+  @media screen and (min-width: 1024px) {
+    justify-content: flex-start;
+    border-radius: 10px;
+    margin-top: $m;
+
+    &__data {
+      width: 75%;
+    }
+  }
 }

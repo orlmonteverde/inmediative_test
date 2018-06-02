@@ -8,35 +8,6 @@
   margin-right: auto;
 }
 
-.main-header__container {
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 640px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.nav-bar {
-  display: flex;
-
-}
-
-.info {
-  @media screen and (min-width: 640px) {
-    display: flex;
-    justify-content: space-between;
-
-    &-left, &-right {
-      width: 48%;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    justify-content: flex-start;
-
-    &-left, &-right {
-      width: 40%;
-    }
-  }
+.screenshots, .info {
+  padding: 0 $s;
 }

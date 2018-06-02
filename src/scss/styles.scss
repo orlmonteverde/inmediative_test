@@ -12,13 +12,14 @@
 
 // THEME
 @import "theme/theme";
-@import "theme/header";
-@import "theme/jumbotron";
-@import "theme/footer";
-@import "theme/screenshots";
 
 // COMPONENTS
+@import "components/header";
+@import "components/jumbotron";
+@import "components/footer";
+@import "components/screenshots";
 @import "components/buttons";
 @import "components/menus";
 @import "components/slider";
 @import "components/modal";
+@import "components/info";

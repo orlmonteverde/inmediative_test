@@ -21,7 +21,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="/public/css/main.min.css">
   <title>Inmediative test</title>
 </head>
@@ -92,9 +91,6 @@
    <footer class="main-footer">
     <p class="main-footer__msg">Gracias por tomarte este tiempo :)</p>
    </footer>
-    <!-- Font-Awesomen -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <!-- Custom JavaScript -->
     <script src="/public/js/app.min.js"></script>
   </body>
   </html>
