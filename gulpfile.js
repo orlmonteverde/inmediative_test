@@ -27,8 +27,8 @@ const babelOptions = {
   ]
 }
 
-gulp.task('sass',()  => {
-  gulp.src('dev/scss/styles.scss')
+gulp.task('sass', () => {
+  gulp.src('src/scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.write())
@@ -39,26 +39,25 @@ gulp.task('sass',()  => {
     .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task('scripts',()  => {
-    gulp.src('dev/js/**/*.js')
+gulp.task('scripts', () => {
+    gulp.src('src/js/**/*.js')
       .pipe(sourcemaps.init())
       .pipe(babel(babelOptions))
       .pipe(concat('app.js'))
       .pipe(uglify())
       .pipe(rename('app.js'))
-      .pipe(rename({ suffix: '.min' }))
+      .pipe(rename({suffix: '.min'}))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('public/js'))
-    })
+})
 
-gulp.task('build', ['sass', 'scripts']);
-
+// Task to dev
 gulp.task('watch', () => {
-  gulp.watch('dev/scss/**/*.scss', ['sass']);
-  gulp.watch('dev/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/**/*.scss', ['sass'])
+  gulp.watch('src/js/**/*.js', ['scripts'])
 })
 
-gulp.task('default', () => {
-  gulp.watch('dev/scss/**/*.scss', ['sass']);
-  gulp.watch('dev/js/**/*.js', ['scripts']);
-})
+// Task to production
+gulp.task('build', ['sass', 'scripts'])
+
+gulp.task('default', ['watch'])

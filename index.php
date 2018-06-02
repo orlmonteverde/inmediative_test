@@ -1,17 +1,17 @@
 <?php
-    $path = "data/db.json";
-    if (!file_exists($path))
-      exit('File not found');
-    
-    $data = file_get_contents($path);
-    $json = json_decode($data, true);
-    
-    $title = $json["title"];
-    $menu = $json["menu"];
-    $jumbotron = $json["jumbotron"];
-    $box = $json["box"];
-    $moments = $json["moment"];
-    $slides = $json["slide"];
+  $path = "data/db.json";
+  if (!file_exists($path))
+    exit('File not found');
+  
+  $data = file_get_contents($path);
+  $json = json_decode($data, true);
+  
+  $title = $json["title"];
+  $menu = $json["menu"];
+  $jumbotron = $json["jumbotron"];
+  $box = $json["box"];
+  $moments = $json["moment"];
+  $slides = $json["slide"];
 ?>
 <!DOCTYPE html>
 <html lang="es">

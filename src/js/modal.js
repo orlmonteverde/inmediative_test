@@ -3,15 +3,19 @@ function openModal(src, alt) {
   modal.setAttribute("id", "modal")
   modal.setAttribute("class", "modal")
   modal.innerHTML = `
+  <div class="modal__container">
     <img src="${src}" alt="${alt}">
-    <button onclick="closeModal()" class="btn">Close</button>
+    <div onclick="closeModal()" class="close">
+      <div class="fas fa-times-circle"></div>
+    </div>
+  </div>
     `
   document.body.appendChild(modal)
 }
 
 function closeModal() {
-  let modal = document.getElementById("modal")
-  modal.parentElement.removeChild(modal)
+    let modal = document.getElementById("modal")
+    modal.remove()
 }
 
 // Array of images from slider

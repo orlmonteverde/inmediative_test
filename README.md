@@ -1,4 +1,5 @@
 # Inmediative test
+
 Test to **Inmediative**
 
 ## Build Setup
@@ -7,17 +8,19 @@ Test to **Inmediative**
 # install dependencies
 npm install
 
-# live reload for dev
-gulp
+# Watch changes and build files
+npm run dev
 
-# build for production with minification
-gulp build
+# build files for production with minification
+npm run build
 ```
 
 ## Preview
 
 ### Desktop
+
 ![Desktop Preview](/doc/desktop.png)
 
 ### Mobile
+
 ![Desktop Preview](/doc/mobile.png)
