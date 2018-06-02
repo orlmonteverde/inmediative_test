@@ -1,6 +1,6 @@
 # Inmediative test
 
-Test to **Inmediative**
+Test to **Inmediative**: A simple website responsive
 
 ## Build Setup
 
@@ -8,10 +8,10 @@ Test to **Inmediative**
 # install dependencies
 npm install
 
-# Watch changes and build files
+# Watch the changes and build the files automatically
 npm run dev
 
-# build files for production with minification
+# Build files for production with minification
 npm run build
 ```
 
