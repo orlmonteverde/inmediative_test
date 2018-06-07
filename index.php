@@ -5,7 +5,7 @@
   
   $data = file_get_contents($path);
   $json = json_decode($data, true);
-  
+
   $title = $json["title"];
   $menu = $json["menu"];
   $jumbotron = $json["jumbotron"];
@@ -30,11 +30,11 @@
        <h1 class="main-header__title"><?php echo $json["title"]?></h1>
        <nav class="main-nav">
          <ul class="nav-bar">
-           <?php 
-            foreach ($menu as $li) {
-              echo "<li class='nav-bar__item btn'><a class='nav-bar__link' href='{$li['href']}'>{$li['title']}</a></li>" . PHP_EOL;
-           }
-           ?>
+           <?php foreach ($menu as $li): ?>
+            <li class='nav-bar__item btn'>
+              <?php echo "<a class='nav-bar__link' href='{$li['href']}'>{$li['title']}</a>"; ?>
+            </li>
+           <?php endforeach; ?>
          </ul>
        </nav>
      </div>
@@ -58,10 +58,10 @@
     <ul class="moment">
       <?php
         $i = 1;
-        foreach ($moments as $moment) {
-          echo "<li class='moment__item'>{$moment}</li>" . PHP_EOL;
-        $i++;
-        }
+        foreach ($moments as $moment):
+          echo "<li class='moment__item'>{$moment}</li>";
+          $i++;
+        endforeach;
       ?>
     </ul>
     </div>
@@ -76,11 +76,15 @@
         <ul id="slider" class="slider__container">
         <?php
           $i = 1;
-          foreach ($slides as $slide) {
-            echo "<li class='slider__item'><img class='slider__img' src='{$slide}' alt='slider image 0{$i}'></li>" . PHP_EOL;
-            $i++;
-          }
+          foreach ($slides as $slide):
         ?>
+          <li class='slider__item'>
+            <?php
+             echo "<img class='slider__img' src='{$slide}' alt='slider image 0{$i}'>";
+            $i++;
+            ?>
+          </li>
+        <?php endforeach; ?>
         </ul>
       </div>
       <div id="arrow_right" class="arrow">

@@ -1,27 +1,27 @@
-const right = document.getElementById("arrow_right"),
-  left = document.getElementById("arrow_left"),
-  slider = document.getElementById("slider"),
-  sliderContainer = slider.parentNode
+(function() {
+  const right = document.getElementById("arrow_right"),
+      left = document.getElementById("arrow_left"),
+      slider = document.getElementById("slider"),
+      sliderContainer = slider.parentNode
 
-console.log(sliderContainer)
+  let position = 0;
 
+  right.addEventListener("click", () => {
+    let limit = 0
+    let currentLeft = slider.style.left.includes("px") ? parseInt(slider.style.left) : 0
 
-let position = 0;
+    if (currentLeft < limit)
+      position += 30
+      slider.style.left = position + "px"
+  })
 
-right.addEventListener("click", () => {
-  let limit = 0
-  let currentLeft = slider.style.left.includes("px") ? parseInt(slider.style.left) : 0
+  left.addEventListener("click", () => {
+    let limit = sliderContainer.offsetWidth - slider.offsetWidth
+    let currentLeft = parseInt(slider.style.left)
 
-  if (currentLeft < limit)
-    position += 30
-    slider.style.left = position + "px"
-})
+    if (currentLeft > limit)
+      position -= 30
+      slider.style.left = position + "px"
+  })
 
-left.addEventListener("click", () => {
-  let limit = sliderContainer.offsetWidth - slider.offsetWidth
-  let currentLeft = parseInt(slider.style.left)
-
-  if (currentLeft > limit)
-    position -= 30
-    slider.style.left = position + "px"
-})
+})()

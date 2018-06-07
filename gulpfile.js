@@ -35,7 +35,7 @@ gulp.task('sass', () => {
     .pipe(autoprefixer(prefixerOptions))
     .pipe(rename('main.css'))
     .pipe(cssmin())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/css/'));
 });
 
@@ -52,7 +52,7 @@ gulp.task('scripts', () => {
 })
 
 // Task to dev
-gulp.task('watch', () => {
+gulp.task('watch', ['build'], () => {
   gulp.watch('src/scss/**/*.scss', ['sass'])
   gulp.watch('src/js/**/*.js', ['scripts'])
 })
