@@ -54,7 +54,7 @@
         ?>
           <li class='slider__item'>
             <?php
-             echo "<img class='slider__img' src='{$slide}' alt='slider image 0{$i}'>";
+             echo "<img class='slider__img' src='docs/{$slide}' alt='slider image 0{$i}'>";
             $i++;
             ?>
           </li>

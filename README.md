@@ -19,8 +19,8 @@ npm run build
 
 ### Desktop
 
-![Desktop Preview](/doc/desktop.png)
+![Desktop Preview](/wireframes/desktop.png)
 
 ### Mobile
 
-![Desktop Preview](/doc/mobile.png)
+![Desktop Preview](/wireframes/mobile.png)

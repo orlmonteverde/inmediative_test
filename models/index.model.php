@@ -1,6 +1,6 @@
 <?php
 
-$path = 'data/db.json';
+$path = 'models/db.json';
 if (!file_exists($path))
   exit('File not found');
 

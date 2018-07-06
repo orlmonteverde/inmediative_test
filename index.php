@@ -1,5 +1,5 @@
 <?php
 
-require_once 'data/database.php';
-
-include "views/index.view.php";
+define('PATH',$_SERVER['DOCUMENT_ROOT']);
+require_once PATH . '/controllers/index.controller.php';
+include PATH . '/views/index.view.php';
